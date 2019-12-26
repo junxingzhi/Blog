@@ -1,5 +1,52 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>骏行の博客</title><link>/Blog/</link><description>只坚持一种正义。我的正义。</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>${static_prefix}newlogo.png</url><title>骏行の博客</title><link>/Blog/</link></image><language>zh-CN</language><lastBuildDate>Thu, 26 Dec 2019 07:57:33 +0806</lastBuildDate><pubDate>Thu, 26 Dec 2019 07:57:33 +0806</pubDate><item><title>我的第一篇文章</title><link>/Blog/archives/my-first-awesome-post/</link><description>&lt;p&gt;这是我的第一篇文章。文章使用 GitHub 管理，并通过 GitHub Actions 自动构建与发布！&lt;/p&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>骏行の博客</title><link>/Blog/</link><description>只坚持一种正义。我的正义。</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>${static_prefix}newlogo.png</url><title>骏行の博客</title><link>/Blog/</link></image><language>zh-CN</language><lastBuildDate>Thu, 26 Dec 2019 08:05:51 +0806</lastBuildDate><pubDate>Thu, 26 Dec 2019 08:05:51 +0806</pubDate><item><title>关于Win10的一些问题的解决方法</title><link>/Blog/archives/Solutions to some of Win10's problems/</link><description>&lt;h1&gt;&lt;strong&gt;关于Win10的一些问题的解决方法&lt;/strong&gt;&lt;/h1&gt;
+&lt;h2&gt;Win10禁用Adminstrator用户导致无法进入系统的解决方案&lt;/h2&gt;
+&lt;p&gt;在Win10系统，由于误操作禁用了Adminstrator用户，并且此时系统里只有该用户，导致即使知道正确的密码，也无法进入系统。网上有很多制作PE U盘恢复系统的教程，个人觉得都太过繁琐。&lt;/p&gt;
+&lt;h3&gt;请看解决步骤： &lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;在开机输入密码的界面，一直按住Shift键。注意不要松开Shift，并且点击屏幕右下方电源重启按钮，此时进入一个新的界面。 &lt;/li&gt;
+&lt;li&gt;在该界面中选择“疑难解答”选项，然后转到另一界面，可以看到这个界面内有许多不同种类的安全模式。我们按下F4或者数字4，选择以此种安全模式重启。 &lt;/li&gt;
+&lt;li&gt;以安全模式重启后，就可以进入系统。我们点击左下角Cortana，搜索cmd,出现命令提示符，并右键以管理员身份运行。在cmd中键入如下命令 &lt;code&gt;net user administrator /active:yes&lt;/code&gt;，这条命令的意思就是开启Adminstrator用户。之后再重启，就能输入密码进入系统，问题解决。
+### 总结： &lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;不要在Adminstrator用户下修改Win10系统的数据，非常危险！ &lt;/li&gt;
+&lt;li&gt;Win10系统不再是开机F8进入安全模式了，它有多种进入安全模式的方法，这里只是说明了其中的一种。 &lt;/li&gt;
+&lt;li&gt;网上有很多制作PE U盘恢复系统的教程，要么就是重装系统，个人觉得都太过繁琐。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;win10系统下误删除了用户重启无法登录&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;不小心在控制面板的用户组里面删除了当前的用户，在电脑重启后无论怎么输入密码都提示不正确不能登录。&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;在选择登录的界面同时点击 shift 和重启按钮； &lt;/li&gt;
+&lt;li&gt;在进入的界面选择“疑难问题”； &lt;/li&gt;
+&lt;li&gt;选择进入安全模式； &lt;/li&gt;
+&lt;li&gt;点击重启进入安全模式后点击文件夹； &lt;/li&gt;
+&lt;li&gt;选择“我的电脑” =&amp;gt; 最上面的“计算机” =&amp;gt; “管理”； &lt;/li&gt;
+&lt;li&gt;双击“本地用户和组”； &lt;/li&gt;
+&lt;li&gt;双击“用户”； &lt;/li&gt;
+&lt;li&gt;空白处右键“新用户”； &lt;/li&gt;
+&lt;li&gt;在弹出的界面输入用户名和密码即可，其他都不用； &lt;/li&gt;
+&lt;li&gt;把下面的“用户下次登录时必须修改密码”勾掉不要，选择“密码永不过期”，其他选项全部处于未选择状态； &lt;/li&gt;
+&lt;li&gt;重启电脑，选择刚才新建的账户登录； &lt;/li&gt;
+&lt;li&gt;如果你原来是用微软的在线账户登录的可以进行下面的步骤还原，如果删除的是本地账户就到此为止了； &lt;/li&gt;
+&lt;li&gt;打开控制面板，选择用户和组； &lt;/li&gt;
+&lt;li&gt;修改本地账户为在线账户； &lt;/li&gt;
+&lt;li&gt;输入你的微软账户名和密码等待设置完成即可。
+## win10系统无法安装vc++2015该如何解决 vc++2015无法安装解决方法
+&lt;em&gt;vc++2015全称Microsoft Visual C++2015，是微软公司的c++开发工具，具有集成开发环境，可提供编辑c语言，c++等编程语言。最近有win10系统用户反映自己的电脑无法安装vc++2015，提示错误代码0x80070666，这是怎么回事，该如何解决呢?下面小编就为大家分享一下win10无法安装VC++2015提示错误代码0x80070666的解决方法。&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;figure class="pswp-item"  data-width="-1" data-height="-1" size-undefined&gt;&lt;img src="https://upload.cc/i1/2018/10/28/O0fkDj.jpg" alt="" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h3&gt;解决方法：&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;前提需要通过程序和功能，将旧版的VC++卸载&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;首先下载“VC6.0垃圾文件清理工具”(下载地址);&lt;/li&gt;
+&lt;li&gt;将下载的到压缩包解压出来;&lt;/li&gt;
+&lt;li&gt;打开文件夹，在CopyAndReg.bat上单击右键，选择以管理员身份运行即可开始清理系统中旧版本VC的一些残留文件。&lt;/li&gt;
+&lt;li&gt;清理完成后重新启动一次计算机即可正常安装VC++2015!&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;figure class="pswp-item"  data-width="-1" data-height="-1" size-undefined&gt;&lt;img src="https://upload.cc/i1/2018/10/28/Hg47zD.jpg" alt="" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;关于win10系统的一些问题就为大家分享到这里，以后还会继续更新一些内容，希望能够给大家带来一些帮助&lt;/strong&gt;&lt;/p&gt;
+</description><author>joxing@outlook.com (骏行の)</author><guid isPermaLink="true">/Blog/archives/Solutions to some of Win10's problems/</guid><pubDate>Fri, 28 Dec 2018 20:34:00 +0806</pubDate></item><item><title>我的第一篇文章</title><link>/Blog/archives/my-first-awesome-post/</link><description>&lt;p&gt;这是我的第一篇文章。文章使用 GitHub 管理，并通过 GitHub Actions 自动构建与发布！&lt;/p&gt;
 &lt;p&gt;&lt;figure class="pswp-item" style="flex: 92.88888888888889" data-width="836" data-height="450"&gt;&lt;img src="https://cdn.jsdelivr.net/gh/junxingzhi/Blog-With-GitHub-Boilerplate@gh-pages/archives/assets/e0affbc80ccb2d596c87b520e37e7071.jpg" alt="幽灵公主剧照" /&gt;&lt;figcaption&gt;幽灵公主剧照&lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;
 </description><author>joxing@outlook.com (骏行の)</author><guid isPermaLink="true">/Blog/archives/my-first-awesome-post/</guid><pubDate>Tue, 17 Dec 2019 20:34:00 +0806</pubDate></item><item><title>Hello World!</title><link>/Blog/archives/typography/</link><description>&lt;div class="notice"&gt;这是一篇示例文章，在这里你可以看到常用页面元素的显示效果，同时也是 Markdown 语法的参考文章。保留或者删除本文，开始自己的创作吧！&lt;/div&gt;&lt;h2&gt;L2 Heading&lt;/h2&gt;
 &lt;h3&gt;L3 Heading&lt;/h3&gt;
